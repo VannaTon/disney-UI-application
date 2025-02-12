@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import image from './../assets/images/image.png'
-import HeaderItem from './Headeritem'
+import Headeritem from './Headeritem'
 import people from './../assets/images/people.png'
 import { HiHome, HiMagnifyingGlass,HiStar,HiPlusCircle,HiTv,  HiPlayCircle  } from 'react-icons/hi2'
 import {HiPlus,HiDotsVertical} from 'react-icons/hi'
@@ -43,20 +43,20 @@ const Header = () => {
      <img src={image} alt="" className='w-[80px] md:[115px] object-cover' />
      <div className=" gap-8  md:flex hidden">
      {menu.map((item, index)=>(
-        <HeaderItem key={index} name={item.name } Icon={item.icon}/>
+        <Headeritem key={index} name={item.name } Icon={item.icon}/>
        ))}
      </div>
      <div className="flex gap-5 md:hidden">
      {menu.map((item,index)=>index<3&&(
-        <HeaderItem key={index} name={''} Icon={item.icon}/>
+        <Headeritem key={index} name={''} Icon={item.icon}/>
        ))}
         <div className=" md:hidden " onClick={()=>setToggle(!toggle)}>
     
-        <HeaderItem name={''} Icon={HiDotsVertical}/>
+        <Headeritem name={''} Icon={HiDotsVertical}/>
        {toggle? <div className=' absolute mt-3 bg-[#121212]
         border-[1px] p-3 border-gray-700 px-5 py-4'>
         {menu.map((item,index)=>index>2&&(
-        <HeaderItem key={index} name={item.name} Icon={item.icon}/>
+        <Headeritem key={index} name={item.name} Icon={item.icon}/>
        ))}
         </div>:null}
       
