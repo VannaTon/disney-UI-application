@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import image from './../assets/images/image.png'
-import Headeritem from './Headeritem'
+import Headeritem from './HeaderItem'
 import people from './../assets/images/people.png'
-import { HiHome, HiMagnifyingGlass,HiStar,HiPlusCircle,HiTv,  HiPlayCircle  } from 'react-icons/hi2'
+import { HiHome, HiMagnifyingGlass,HiStar,HiTv,  HiPlayCircle  } from 'react-icons/hi2'
 import {HiPlus,HiDotsVertical} from 'react-icons/hi'
 const Header = () => {
   const [toggle,setToggle] = useState(false);
